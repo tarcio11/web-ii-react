@@ -1,0 +1,92 @@
+.signin {
+  position: relative;
+  height: 100%;
+  height: 70vh;
+  background: var(--primary-normal);
+}
+
+.signin form {
+  width: 100%;
+  max-width: 450px;
+}
+
+.signin form h1 {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--white-light);
+  margin-bottom: 16px;
+}
+
+.signin form input {
+  margin-top: 8px;
+}
+
+.signin form .input-group {
+  display: flex;
+}
+
+.signin form .input-group input + input {
+  margin-left: 8px;
+}
+
+form input {
+  width: 100%;
+  height: 60px;
+  color: #333;
+  border: 1px solid #dcdce6;
+  border-radius: 8px;
+  padding: 0 24px;
+}
+
+form textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 140px;
+  color: #333;
+  border: 1px solid #dcdce6;
+  border-radius: 8px;
+  padding: 16px 24px;
+  line-height: 24px;
+}
+
+.back-link {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  color: #41414d;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.signin a svg {
+  position: absolute;
+  margin-right: 8px;
+
+  top: 16px;
+  right: 16px;
+}
+
+.section-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: var(--primary-normal);
+}
+
+.back-link:hover {
+  opacity: 0.8;
+}
+
+.group-bottons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.group-bottons a {
+  color: var(--white-light);
+}
