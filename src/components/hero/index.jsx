@@ -7,10 +7,12 @@ import iconContaclessImg from '../../assets/svg/icon-contactless.svg';
 
 import './styles.css'
 import { Link } from 'react-router-dom';
+import { BackgroundBody } from '../background-body copy';
 
 export const Hero = () => {
   return (
     <>
+    <BackgroundBody />
       <div className="bg-home">
         <img src={bgHomeImg} className="svg-bg-home" alt="" onload="SVGInject(this)" />
       </div>

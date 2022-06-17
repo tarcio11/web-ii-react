@@ -1,0 +1,43 @@
+.container-modal h2 {
+  color: var(--white-dark);
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.container-modal input {
+  width: 90%;
+  padding: 0 1.5rem;
+  height: 4rem;
+  border-radius: 0.25rem;
+  border: 1px solid #D7D7D7;
+  background: #E7E9EE;
+  font-weight: 400;
+  font-size: 1rem;  
+}
+
+.container-modal input::placeholder {
+  color: var(--gray-1);
+}
+
+.container-modal input + input {
+  margin-top: 1rem;
+}
+
+.container-modal button[type="submit"] {
+  width: 100%;
+  padding: 0 1.5rem;
+  height: 4rem;
+  background: var(--white-dark);
+  color: var(--primary-dark);
+  border-radius: 0.25rem;
+  border: 0;
+  font-size: 1rem;
+  margin-top: 1.5rem; 
+  font-weight: 600;
+  transition: filter 0.2s ease;
+  cursor: pointer;
+}
+
+.container-modal button:hover {
+  opacity: 0.8;
+}

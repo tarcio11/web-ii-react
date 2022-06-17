@@ -1,16 +1,26 @@
-import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import { AuthProvider } from "./hooks/auth";
+import { Dashboard } from "./components/dashboard";
+import { ErrorPage } from "./components/error-page";
 import { Home } from "./components/home";
 import { SignIn } from "./components/signin";
 import { SignUp } from "./components/signup";
-// import ErrorPage from "./pages/Error";
+import { ProtectedRoute } from './private-router';
 export default function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<SignIn />} />
-        <Route path="/register" element={<SignUp />} />
-        {/* <Route path="*" element={<ErrorPage />} /> */}
-      </Routes>
+      <AuthProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<SignIn />} />
+          <Route path="/register" element={<SignUp />} />
+          <Route path="/dashboard" element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }/>
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+      </AuthProvider>
 </Router> );
 }
